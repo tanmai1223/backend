@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title
+        link(rel="stylesheet", href="style.css")
+            
+    body 
+        include  partials/header
+        
+        block content
+        
+        footer
+            p(style="text-align:center;font-size:1.5rem;") Copyright #{new Date().getFullYear()}  
