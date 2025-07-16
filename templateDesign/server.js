@@ -1,19 +1,14 @@
 const express=require("express")
 const path=require("path")
 const app=express()
+const userRouter=require('./routes/routers')
 
 app.set("view engine","pug")
 app.set("views",path.join(__dirname,"views"))
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/',userRouter)
 
 
-app.get('/',(req,res)=>{
-    res.render('index',{
-        title:"My website",
-        content:"This is the my wesite",
-        footer:"This is the footer of my website"
-    })
-})
 
 
 app.listen(3000,()=>{
